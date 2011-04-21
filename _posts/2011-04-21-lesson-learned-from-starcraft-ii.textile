@@ -1,0 +1,19 @@
+---
+layout: post
+title: Business lessons learned from watching and playing StarCraft II
+excerpt: You might think that playing Starcraft II (SC2) is a waste of time. You could very well be mistaken. Intented or not, good SC2 players seem to use tactics that are very similar to my business views. Let me explain what these are.
+---
+
+h1. {{ page.title }}
+
+!>/img/stories/sc2.png!
+
+p(excerpt). {{ page.excerpt }}
+
+h3. Have a vision, not a step-by-step plan.
+
+Most strategies in SC2 are described in 'builds' and are mostly step-by-step guides to a certain unit composition, each with different strengths and weaknesses. However, in SC2, as in business, flexibility is key. Even if you execute your build perfectly, you can still be slaughtered if you haven't checked what your opponent is doing. Which brings us to:
+
+h3. Getting information early
+
+Without scouting your opponent, you are absolutely lost. You need to know what you *should* be building by knowing the conditions of the match. Similarly, a startup should get to know their problem space as soon as possible. You cannot build a solution for a problem you do not understand.

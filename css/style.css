@@ -1,0 +1,148 @@
+@font-face {
+    font-family: Harabara;
+    src: url('fonts/harabara-webfont.eot');
+    src: url('fonts/harabara-webfont.eot?#iefix') format('eot'),
+         url('fonts/harabara-webfont.woff') format('woff'),
+         url('fonts/harabara-webfont.ttf') format('truetype'),
+         url('fonts/harabara-webfont.svg#webfontanoYLCBS') format('svg');
+     font-weight: bold;
+     font-style: normal;
+}
+
+body {
+    margin: 30px 0;
+    color: #6A6A6A;
+}
+
+a {
+    text-decoration: none;
+    color: #FF7A20;
+}
+a:hover {
+    color: #FF4234;
+}
+h1 { font-size: 27px; }
+h2 { font-size: 22px; }
+h3 { font-size: 19px; }
+h4 { font-size: 17px; }
+
+header h1 {
+    margin-bottom: 30px;
+}
+
+nav {
+}
+
+nav ul {
+    float: right;
+    list-style: none;
+    margin: 0;
+}
+
+nav li {
+    float: left;
+    margin: 0 5px 0 0;
+    background-color: #01A2A6;
+    color: #fff;
+    font: 17px/120% Harabara, Helvetica, Arial, sans-serif;
+}
+nav li a {
+    display: block;
+    padding: 9px;
+    width: 62px;
+    height: 62px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+nav li a:hover {
+    color: #01A2A6;
+    background-color: #BDF271;
+}
+
+h1 { color: #D93312; }
+h2, h3, h4, h5, h6 {
+    color: #4A4A4A;
+}
+h1, h2, h3, h4, h5, h6 {
+    line-height: 120%;
+    letter-spacing: -1px;
+    margin-bottom: 5px;
+}
+h1.category, h2.category, h3.category,
+h4.category, h5.category, h6.category {
+    float:left;
+    text-align: right;
+    color: #D93312;
+    width: 80px;
+    margin-right: 15px;
+    margin-bottom: 0;
+}
+
+.content .item {
+    margin-bottom: 30px;
+}
+
+img.right {
+    float: right;
+}
+
+ul.blogs {
+    list-style: none;
+    margin: 0;
+}
+ul.blogs li {
+    margin: 0;
+}
+ul.blogs li h3,
+ul.blogs li h3 a {
+    color: #6A6A6A;
+}
+ul.blogs li h3 a:hover {
+    color: #3A3A3A;
+}
+
+h2.comments {
+    color: #D93312;
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
+}
+
+.content .date {
+    display: inline;
+    font-size: 13px;
+    font-weight: normal;
+    line-height: 21px;
+    letter-spacing: normal;
+    color: #aaa;
+    margin-left: 0.5em;
+}
+
+.content h3,
+.content h4,
+.content div {
+    line-height: 21px;
+}
+
+#post {
+    margin-left: 105px;
+}
+
+#post .excerpt {
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#footer {
+    border-top: 1px solid #C0C0C0;
+    padding-top: 10px;
+    margin-left: 105px;
+    text-align: right;
+    font-size: 11px;
+    color: #939393;
+}
+
+#disqus_thread table {
+    margin: 0;
+}
