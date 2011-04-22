@@ -6,7 +6,7 @@ excerpt: You might think that playing Starcraft II (SC2) is a waste of time. You
 
 h1. {{ page.title }}
 
-!>/img/stories/sc2.png!
+!>/img/stories/sc2.png(SC2 logo)!
 
 p(excerpt). {{ page.excerpt }}
 
