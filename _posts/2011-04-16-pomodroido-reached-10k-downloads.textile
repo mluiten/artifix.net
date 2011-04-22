@@ -4,6 +4,6 @@ title: Pomodroido download count reached 10K!
 excerpt: My first Android application, Pomodroido, has reached the magical border of <b>10K</b> downloads!
 ---
 
-h2. Testing me
+h2. {{ page.title }}
 
-W
+p(excerpt). {{ page.excerpt }}

@@ -2,37 +2,39 @@
 layout: default
 title: Web &amp; mobile development
 ---
-<div class="grid_12 content">
-    <section id="we" class="item">
-        <h3 class="category">
-            We are
-        </h3><div style="float: left; width: 845px; font-size: 21px; font-weight: bold; color: #6A6A6A; letter-spacing: -1px;">
-            trying to make the interweb a better place by innovation.
-        </div>
-        <div class="clear"></div>
-    </section>
-    <section id="featured" class="item">
-        <h3 class="category">
-            Featured projects
-        </h3><div style="float: left; width: 845px;">
-            <img src="img/test.jpg" style="position: relative; margin-left: -25px; z-index: -5;"/>
-        </div>
-        <div class="clear"></div>
-    </section>
-    <section id="blogs" class="item">
-        <h3 class="category">
-            Blogs
-        </h3>
-        <ul class="blogs" style="float: left; width: 845px;">
-            {% for post in site.posts limit:4 %}
-            <li><article>
-                <h3>
-                    <a href="{{post.url}}">{{post.title}}</a>
-                    <span class="date">{{ post.date | date_to_string }}</span>
-                </h3>
-                <p class="excerpt">{{ post.excerpt }}</p>
-            </article></li>
-            {% endfor %}
-        </ul>
-    </section>
-</div>
+<section id="we" class="item">
+    <h3 class="category">
+        We are
+    </h3><div class="article" style="font-size: 21px; font-weight: bold; color: #6A6A6A; letter-spacing: -1px;">
+        trying to make the interweb a better place by innovating.
+    </div>
+    <div class="clear"></div>
+</section>
+<section id="featured" class="item">
+    <h3 class="category">
+        Featured projects
+    </h3><div class="article">
+        <h5><span style="font-weight: normal">Website:</span> Testing 123</h5>
+    </div><div class="article">
+        <h5><span style="font-weight: normal">Website:</span> Testing 123</h5>
+    </div><div class="article">
+        <h5><span style="font-weight: normal">Android:</span> Pomodroido</h5>
+    </div>
+    <div class="clear"></div>
+</section>
+<section id="blogs" class="item">
+    <h3 class="category">
+        Blogs
+    </h3>
+    <ul class="blogs article">
+        {% for post in site.posts limit:4 %}
+        <li><article>
+            <h3>
+                <a href="{{post.url}}">{{post.title}}</a>
+                <span class="date">{{ post.date | date_to_string }}</span>
+            </h3>
+            <p class="excerpt">{{ post.excerpt }}</p>
+        </article></li>
+        {% endfor %}
+    </ul>
+</section>

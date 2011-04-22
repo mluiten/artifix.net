@@ -1,0 +1,16 @@
+---
+layout: default
+title: Blogs
+---
+<ul class="blogs">
+{% for post in site.posts %}
+<li>
+    <h3 class="category">{{ post.date | date_to_string }}</h3>
+    <div class="article">
+        <h3 ><a href="{{post.url}}">{{ post.title }}</a></h3>
+        <p>{{ post.excerpt }}</p>
+    </div>
+    <div class="clear"></div>
+</li>
+{% endfor %}
+</ul>
