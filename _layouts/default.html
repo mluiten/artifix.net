@@ -1,31 +1,34 @@
 <!DOCTYPE html>
-<html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js ie6" lang="en"> <![endif]-->
+<!--[if IE 7]> <html class="no-js ie7" lang="en"> <![endif]-->
+<!--[if IE 8]> <html class="no-js ie8" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
 <head>
+    <meta charset="utf-8">
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-{% if page.title %}
-    <meta property="og:title" content="{{ page.title }}"/>
-{% else -%}
-    <meta property="og:title" content="Artifix"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Let's comply to our Facebook overlords -->
+{% if page.title %}    <meta name="og:title" content="{{ page.title }}"/>
+{% else %}    <meta name="og:title" content="Artifix"/>
+{% endif %}    <meta name="og:type" content="company"/>
+    <meta name="og:url" content="http://artifix.net{{ page.url}}" />
+    <meta name="og:image" content="http://artifix.net/img/icon.png"/>
+    <meta name="og:site_name" content="Artifix"/>
+    <meta name="fb:admins" content="100000153177839"/>
+{% if page.excerpt %}    <meta name="og:description" content="{{ page.excerpt }}"/>
+{% else %}    <meta name="og:description" content="The company of Menno Luiten, for web &amp; mobile development with innovation."/>
 {% endif %}
-    <meta property="og:type" content="company"/>
-    <meta property="og:url" content="http://artifix.net{{ page.url}}" />
-    <meta property="og:image" content="http://artifix.net/img/icon.png"/>
-    <meta property="og:site_name" content="Artifix"/>
-    <meta property="fb:admins" content="100000153177839"/>
-{% if page.excerpt %}
-    <meta property="og:description" content="{{ page.excerpt }}"/>
-{% else %}
-    <meta property="og:description" content="The company of Menno Luiten, for web &amp; mobile development with innovation."/>
-{% endif %}
-{% if page.title %}
-    <title>{{ page.title }} &raquo; Artifix</title>
-{% else %}
-    <title>Artifix</title>
-{% endif %}
-    <link rel="stylesheet" type="text/css" media="all" href="/css/960.gs/min/reset.css" />
-    <link rel="stylesheet" type="text/css" media="all" href="/css/960.gs/min/text.css" />
-    <link rel="stylesheet" type="text/css" media="all" href="/css/960.gs/min/960.css" />
-    <link rel="stylesheet" type="text/css" media="all" href="/css/style.css" />
+{% if page.title %}    <title>{{ page.title }} &raquo; Artifix</title>
+{% else %}    <title>Artifix</title>
+{% endif %}    <meta name="author" content="Menno Luiten <mluiten@artifix.net>" />
+
+    <link rel="stylesheet" type="text/css" href="/css/960.gs/min/reset.css" />
+    <link rel="stylesheet" type="text/css" href="/css/960.gs/min/text.css" />
+    <link rel="stylesheet" type="text/css" href="/css/960.gs/min/960.css" />
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
+    <script src="/js/html5/libs/modernizr-1.7.min.js"></script>
 </head>
 <body class="container_12">
     <header>
@@ -33,13 +36,13 @@
         <nav class="grid_8">
           <ul>
             <li{% if page.url == '/products.html' %} class="active"{% endif %}><a href="#">web &amp; mobile projects</a></li>
-            <li{% if page.url == '/archive.html' %} class="active"{% endif %}><a href="/archive.html">blog</a></li>
+            <li{% if page.url == '/blog.html' %} class="active"{% endif %}><a href="/blog.html">blog</a></li>
             <li{% if page.url == '/about.html' %} class="active"{% endif %}><a href="/about.html">about us</a></li>
           </ul>
         </nav>
         <div class="clear"></div>
     </header>
-    <div class="grid_12 content">
+    <div class="grid_12 content" role="main">
         {{ content }}
     </div>
     <div class="clear"></div>
@@ -59,18 +62,16 @@
             </div>
         </div>
     </footer>
+
+    <!--[if lt IE 7 ]>
+    <script src="/js/html5/libs/dd_belatedpng.js"></script>
+    <script>DD_belatedPNG.fix("img, .png_bg"); // Fix any <img> or .png_bg bg-images. Also, please read goo.gl/mZiyb </script>
+    <![endif]-->
     <script type="text/javascript">
-
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-18800569-3']);
-    _gaq.push(['_trackPageview']);
-
-    (function() {
-         var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-         ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-     })();
-
-</script>
+        var _gaq=[["_setAccount","UA-18800569-3"],["_trackPageview"]];
+        (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
+         g.src=("https:"==location.protocol?"//ssl":"//www")+".google-analytics.com/ga.js";
+         s.parentNode.insertBefore(g,s)}(document,"script"));
+    </script>
 </body>
 </html>

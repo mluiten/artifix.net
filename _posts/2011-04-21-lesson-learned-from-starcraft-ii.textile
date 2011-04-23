@@ -2,6 +2,8 @@
 layout: post
 title: Business lessons learned from watching and playing StarCraft II
 excerpt: You might think that playing Starcraft II (SC2) is a waste of time. You could very well be mistaken. Intented or not, good SC2 players seem to use tactics that are very similar to my business views. Let me explain what these are.
+
+author: Menno Luiten
 ---
 
 h1. {{ page.title }}
@@ -9,6 +11,8 @@ h1. {{ page.title }}
 !>/img/stories/sc2.png(SC2 logo)!
 
 p(excerpt). {{ page.excerpt }}
+
+I'm a big fan of Starcraft II and E-Sports in general, and think it's heavily underrated.
 
 h3. Have a vision, not a step-by-step plan.
 
