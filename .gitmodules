@@ -1,3 +1,6 @@
 [submodule "_html5-boilerplate"]
 	path = _html5-boilerplate
 	url = git://github.com/paulirish/html5-boilerplate.git
+[submodule "_960.gs"]
+	path = _960.gs
+	url = git://github.com/nathansmith/960-Grid-System.git
