@@ -10,8 +10,31 @@ I'm currently working on a project that requires me to run the "clojure-hadoop":
 
 h3. Whirr - running Hadoop in the cloud
 
+"Whirr":http://incubator.apache.org/whirr/ is an Apache incubator project designed to provide a uniform API to deploy distributed services to a cloud provider. In this case, I'm deploying the Hadoop library to Amazon EC2, but other services include Cassandra, Zookeeper and HBase and Rackspace Cloud Servers is also supported as a provider, with the promise of more to come.
+
+There are two Whirr libraries; a set of python scripts (which seemingly only supports the Hadoop and EC2 combo) and the newer Java-based scripts. The latter uses "jclouds":http://code.google.com/p/jclouds/, which seems to enable most of the cloud-agnostic features of Whirr.
+
+I used the java libraries. First, I copied the hadoop config file from 
+
+{% highlight ini %}
+whirr.hadoop-install-function=install_cdh_hadoop
+whirr.hadoop-configure-function=configure_cdh_hadoop
+{% endhighlight %}
+
 h3. CDH3 - the Hadoop distribution of choice
 
 h3. clojure-hadoop
 
+{% highlight clojure %}
+(defn gentree
+    "Generates a tree with specified depth and width in prefix notation
+     e.g. (+ (- 1 2) (* 3 4))"
+     [tree depth width]
+     (if (zero? depth)
+         (concat tree (repeatedly width #(+ 1 (rand-int 5))))
+         (map (fn [_] (conj (gentree tree (dec depth) width) (rand-nth operators))) (range width))))
+{% endhighlight %}
+
 h3. Job == uberjar
+
+Woooet
