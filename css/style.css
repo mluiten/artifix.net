@@ -189,6 +189,12 @@ h3.comments {
     width: 840px;
 }
 
+#post .author {
+    float: right;
+    font-size: 12px;
+    margin-top: 0;
+    color: #888;
+}
 #post .excerpt {
     font-size: 14px;
     font-weight: bold;

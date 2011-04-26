@@ -7,6 +7,7 @@ stylesheets: ['/css/syntax.css']
     <h1>{{ page.title }}</h1>
 {% if page.excerpt %}   <p class="excerpt"><strong>{{ page.excerpt }}</strong></p>{% endif %}
     {{ content }}
+    {% if page.author %}<p class="author">Written by {{ page.author }}</p>{% endif %}
 
 <div class="likes" style="clear: left;">
     <a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal">Tweet</a>
