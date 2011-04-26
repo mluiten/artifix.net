@@ -11,7 +11,7 @@
 
 body {
     margin: 30px 0;
-    color: #6A6A6A;
+    color: #5A5A5A;
 }
 
 a {
@@ -21,7 +21,20 @@ a {
 a:hover {
     color: #FF4234;
 }
-h1 { font-size: 27px; }
+#post a {
+    text-decoration: underline;
+}
+a.external {
+    background: url(/img/external.png) center right no-repeat;
+    padding-right: 13px;
+}
+
+sub {
+    font-size: 0.8em;
+}
+
+
+h1 { font-size: 25px; }
 h2 { font-size: 22px; }
 h3 { font-size: 19px; }
 h4 { font-size: 17px; }
@@ -64,23 +77,30 @@ nav li.active a {
     background-color: #BDF271;
 }
 
-h1 { color: #D93312; }
-h2, h3, h4, h5, h6 {
-    color: #4A4A4A;
+p, ul, ol {
+    margin: 16px 0;
 }
 h1, h2, h3, h4, h5, h6 {
+    margin: 24px 0;
+    color: #4A4A4A;
     line-height: 120%;
     letter-spacing: -1px;
-    margin-bottom: 10px;
+    margin-bottom: -10px;
 }
-h1.category, h2.category, h3.category,
-h4.category, h5.category, h6.category {
+h1:first-child, h2:first-child, h3:first-child,
+h4:first-child, h5:first-child, h6:first-child {
+    margin-top: 0;
+}
+h1 {
+    color: #D93312;
+    margin-bottom: 16px;
+}
+.category {
     float:left;
     text-align: right;
     color: #D93312;
     width: 80px;
-    margin-right: 15px;
-    margin-bottom: 0;
+    margin: 0 15px 0 0;
 }
 
 .content .item {
@@ -91,10 +111,9 @@ h4.category, h5.category, h6.category {
     width: 840px;
 }
 
-img.right {
-    float: right;
+.content ul li {
+    margin: 0 50px 0 30px;
 }
-
 ul.blogs {
     list-style: none;
     margin: 0;
@@ -104,10 +123,12 @@ ul.blogs li {
 }
 ul.blogs li h3,
 ul.blogs li h3 a {
+    margin-top: 0;
+    margin-bottom: -10px;
     color: #4A4A4A;
 }
 ul.blogs li h3 a:hover {
-    color: #2A2A2A;
+    color: #0A0A0A;
 }
 ul.blogs li h3.category {
     color: #D93312;
@@ -125,6 +146,7 @@ ul.blogs li h3.category {
 }
 #featured .article h5 {
     background-color: rgba(0,0,0, 0.4);
+    margin: 0;
     padding: 10px 14px;
     color: #fff;
     text-shadow: -1px -1px 0 rgba(0,0,0, 0.5);
@@ -141,13 +163,15 @@ h3.comments {
 }
 
 .content .date {
-    display: inline;
     font-size: 13px;
+    color: #999;
+}
+.content h3 .date {
+    margin-top: 0;
+    margin-left: 0.5em;
+    letter-spacing: normal;
     font-weight: normal;
     line-height: 21px;
-    letter-spacing: normal;
-    color: #aaa;
-    margin-left: 0.5em;
 }
 
 .content h3,
@@ -162,7 +186,6 @@ h3.comments {
 }
 
 #post .excerpt {
-    margin-top: 10px;
     font-size: 14px;
     font-weight: bold;
 }
@@ -174,6 +197,11 @@ h3.comments {
     width: 840px;
     font-size: 11px;
     color: #939393;
+}
+
+.likes iframe {
+    height: 21px !important;
+    vertical-align: top;
 }
 
 #disqus_thread table {

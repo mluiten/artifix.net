@@ -7,7 +7,6 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Let's comply to our Facebook overlords -->
 {% if page.title %}    <meta name="og:title" content="{{ page.title }}"/>
@@ -20,7 +19,7 @@
 {% if page.excerpt %}    <meta name="og:description" content="{{ page.excerpt }}"/>
 {% else %}    <meta name="og:description" content="The company of Menno Luiten, for web &amp; mobile development with innovation."/>
 {% endif %}
-{% if page.title %}    <title>{{ page.title }} &raquo; Artifix</title>
+{% if page.title %}    <title>{{ page.title }} - Artifix</title>
 {% else %}    <title>Artifix</title>
 {% endif %}    <meta name="author" content="Menno Luiten <mluiten@artifix.net>" />
 
@@ -32,12 +31,12 @@
 </head>
 <body class="container_12">
     <header>
-        <h1 class="grid_4"><a href="/"><img src="/img/logo.png" /></a></h1>
+        <h1 class="grid_4"><a href="/"><img src="/img/logo.png" alt="Artifix logo" /></a></h1>
         <nav class="grid_8">
           <ul>
-            <li{% if page.url == '/products.html' %} class="active"{% endif %}><a href="#">web &amp; mobile projects</a></li>
+            <li{% if page.url == '/products.html' %} class="active"{% endif %}><a href="/products.html">web &amp; mobile projects</a></li>
             <li{% if page.url == '/blog.html' %} class="active"{% endif %}><a href="/blog.html">blog</a></li>
-            <li{% if page.url == '/about.html' %} class="active"{% endif %}><a href="/about.html">about us</a></li>
+            <li{% if page.url == '/about.html' %} class="active"{% endif %}><a href="/about.html">about me</a></li>
           </ul>
         </nav>
         <div class="clear"></div>
@@ -56,7 +55,7 @@
                 Artifix will soon be registered at the Kamer van Koophandel of Leiden<br/>
                 All rights reserved &copy; Artifix, 2011
             </p>
-            <div id="fb-like" style="clear: left;">
+            <div class="fb-like" style="clear: left;">
                 <script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script>
                 <fb:like href="http://artifix.net" show_faces="true" width="450" font="arial"></fb:like>
             </div>

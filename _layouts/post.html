@@ -1,12 +1,15 @@
 ---
 layout: default
 ---
+<div class="category date">Posted on<br/>{{ page.date | date_to_string }}</div>
 <div id="post">
-{{ content }}
+    <h1>{{ page.title }}</h1>
+{% if page.excerpt %}   <p class="excerpt"><strong>{{ page.excerpt }}</strong></p>{% endif %}
+    {{ content }}
 
-<div id="fb-like" style="clear: left;">
-    <script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script>
-    <fb:like href="http://artifix.net{{ page.url }}" layout="button_count" show_faces="true" width="840" font="arial"></fb:like>
+<div class="likes" style="clear: left;">
+    <a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal">Tweet</a>
+    <fb:like href="http://artifix.net{{ page.url }}" layout="button_count" show_faces="true" font="arial"></fb:like>
 </div>
 
 <h3 class="comments">Comments</h3>
@@ -25,5 +28,6 @@ layout: default
      })();
 </script>
 <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-
 </div>
+
+<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>

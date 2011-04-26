@@ -3,6 +3,8 @@ auto:        false
 server:      false
 server_port: 4000
 
+url: http://artifix.net
+
 source:      .
 destination: ./_site
 plugins:     ./_plugins

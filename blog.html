@@ -7,8 +7,10 @@ title: Blog
 <li>
     <h3 class="category">{{ post.date | date_to_string }}</h3>
     <div class="article">
-        <h3 ><a href="{{post.url}}">{{ post.title }}</a></h3>
-        <p>{{ post.excerpt }}</p>
+        <article>
+            <h3 ><a href="{{post.url}}">{{ post.title }}</a></h3>
+            <p>{{ post.excerpt }}</p>
+        </article>
     </div>
     <div class="clear"></div>
 </li>
