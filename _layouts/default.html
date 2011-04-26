@@ -27,6 +27,9 @@
     <link rel="stylesheet" type="text/css" href="/css/960.gs/min/text.css" />
     <link rel="stylesheet" type="text/css" href="/css/960.gs/min/960.css" />
     <link rel="stylesheet" type="text/css" href="/css/style.css" />
+{% if page.stylesheets %}{% for stylesheet in page.stylesheets %}
+    <link rel="stylesheet" type="text/css" href="{{ stylesheet }}" />
+{% endfor %}{% endif %}
     <script src="/js/html5/libs/modernizr-1.7.min.js"></script>
 </head>
 <body class="container_12">

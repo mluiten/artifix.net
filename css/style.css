@@ -77,7 +77,8 @@ nav li.active a {
     background-color: #BDF271;
 }
 
-p, ul, ol {
+p, ul, ol,
+#post div.highlight {
     margin: 16px 0;
 }
 h1, h2, h3, h4, h5, h6 {
@@ -122,11 +123,12 @@ ul.blogs li {
     margin: 0;
 }
 ul.blogs li p {
-    margin-top: 12px;
+    margin-top: -12px;
 }
 ul.blogs li h3,
 ul.blogs li h3 a {
     margin-top: 0;
+    margin-bottom: 16px;
     color: #4A4A4A;
 }
 ul.blogs li h3 a:hover {
