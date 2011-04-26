@@ -1,0 +1,10 @@
+---
+layout: post
+title: Deploying clojure-hadoop to EC2
+
+author: Menno Luiten
+---
+
+I'm currently working on a project that requires me to run the "clojure-hadoop":https://github.com/alexott/clojure-hadoop library on a EC2 cluster. This blog is a quick rundown on how set up the basic infrastructure.
+
+
