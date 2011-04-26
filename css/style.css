@@ -121,10 +121,12 @@ ul.blogs {
 ul.blogs li {
     margin: 0;
 }
+ul.blogs li p {
+    margin-top: 12px;
+}
 ul.blogs li h3,
 ul.blogs li h3 a {
     margin-top: 0;
-    margin-bottom: -10px;
     color: #4A4A4A;
 }
 ul.blogs li h3 a:hover {
