@@ -2,6 +2,7 @@
 layout: post
 title: Deploying clojure-hadoop to EC2
 
+published: false
 author: Menno Luiten
 ---
 
