@@ -5,6 +5,7 @@
  * https://github.com/mojombo/tpw/blob/master/css/syntax.css
  */
 .highlight  { background: #eaeaea; padding: 10px 15px; }
+span.highlight { padding: 4px 6px; font-family: monospace; }
 .highlight pre { margin: 0 }
 .highlight .c { color: #999988; font-style: italic } /* Comment */
 .highlight .err { color: #a61717; background-color: #e3d2d2 } /* Error */
