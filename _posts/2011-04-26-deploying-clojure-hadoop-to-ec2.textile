@@ -1,11 +1,12 @@
 ---
 layout: post
-title: Deploying clojure-hadoop to EC2
+
+title: Clojure map/reduce jobs using Hadoop on Amazon EC2
+excerpt: How's that for buzzwords, huh? I'm currently working on a project that requires me to run the clojure-hadoop library on a EC2 cluster. This blog is a quick rundown on how set up the basic infrastructure.
 
 author: Menno Luiten
 ---
 
-I'm currently working on a project that requires me to run the "clojure-hadoop":https://github.com/alexott/clojure-hadoop library on a EC2 cluster. This blog is a quick rundown on how set up the basic infrastructure.
 
 h3. Whirr - running Hadoop in the cloud
 
@@ -13,14 +14,23 @@ h3. Whirr - running Hadoop in the cloud
 
 There are two Whirr libraries; a set of python scripts (which seemingly only supports the Hadoop and EC2 combo) and the newer Java-based scripts. The latter uses "jclouds":http://code.google.com/p/jclouds/, which seems to enable most of the cloud-agnostic features of Whirr.
 
-I used the java libraries. First, I copied the hadoop config file from 
+Using the most up-to-date techniques, I decided to use the Java libraries. So, after downloading the latest Whirr:
+
+{% highlight console %}
+mluiten@box:~$ tar zxf whirr-0.4.0-incubator.tar.gz
+mluiten@box:~$ test
+{% endhighlight %}
+
+Then we should add (or uncomment) the following lines to the %(highlight)/recipes/hadoop-ec2.properties% file.
 
 {% highlight ini %}
 whirr.hadoop-install-function=install_cdh_hadoop
 whirr.hadoop-configure-function=configure_cdh_hadoop
 {% endhighlight %}
 
-h3. CDH3 - the Hadoop distribution of choice
+h3. Installing CDH3 locally
+
+We can now whirr up a cluster of CDH3 hadoop machines using the %(highlight)whirr launch-cluster% command, but to inject jobs into this cluster we need to install CDH3 locally as well. Luckily, Cloudera has made this exceptionally easy.
 
 h3. clojure-hadoop
 
@@ -34,6 +44,6 @@ h3. clojure-hadoop
          (map (fn [_] (conj (gentree tree (dec depth) width) (rand-nth operators))) (range width))))
 {% endhighlight %}
 
-h3. Job == uberjar
+h3. Executing the job using lein uberjar
 
-Woooet
+All we need now, is to inject the newly created clojure-hadoop job into the whirred-up Hadoop cluster. To do this, we need to package the clojure files, together with clojure-hadoop and all other libraries we depend on. A easy way to deal with this is to use Leiningen.
