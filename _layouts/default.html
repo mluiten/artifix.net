@@ -26,9 +26,9 @@
     <link rel="stylesheet" type="text/css" href="/css/960.gs/min/reset.css" />
     <link rel="stylesheet" type="text/css" href="/css/960.gs/min/text.css" />
     <link rel="stylesheet" type="text/css" href="/css/960.gs/min/960.css" />
-    <link rel="stylesheet" type="text/css" href="/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="/css/style.css?{{ site.time | date: "%s" }}" />
 {% if page.stylesheets %}{% for stylesheet in page.stylesheets %}
-    <link rel="stylesheet" type="text/css" href="{{ stylesheet }}" />
+    <link rel="stylesheet" type="text/css" href="{{ stylesheet }}?{{ site.time | date: "%s" }}" />
 {% endfor %}{% endif %}
     <script src="/js/html5/libs/modernizr-1.7.min.js"></script>
 </head>
