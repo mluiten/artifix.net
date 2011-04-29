@@ -7,6 +7,7 @@ excerpt: How's that for buzzwords, huh? I'm currently working on a project that 
 author: Menno Luiten
 ---
 
+!/img/stories/Clouds.jpg(Clouds)!
 
 h3. Whirr - running Hadoop in the cloud
 
