@@ -2,20 +2,22 @@
 layout: default
 stylesheets: ['/css/syntax.css']
 ---
-<div class="category date">Posted on<br/>{{ page.date | date_to_string }}</div>
-<div id="post">
-    <h1>{{ page.title }}</h1>
-{% if page.excerpt %}   <p class="excerpt"><strong>{{ page.excerpt }}</strong></p>{% endif %}
-    {{ content }}
-    {% if page.author %}<p class="author">Written by {{ page.author }}</p>{% endif %}
+<section>
+    <div class="category date">Posted on<br/>{{ page.date | date_to_string }}</div>
+    <div id="post">
+        <h1>{{ page.title }}</h1>
+    {% if page.excerpt %}   <p class="excerpt"><strong>{{ page.excerpt }}</strong></p>{% endif %}
+        {{ content }}
+        {% if page.author %}<p class="author">Written by {{ page.author }}</p>{% endif %}
 
-<div class="likes" style="clear: left;">
-    <a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal">Tweet</a>
-    <fb:like href="http://artifix.net{{ page.url }}" layout="button_count" show_faces="true" font="arial"></fb:like>
+    <div class="likes" style="clear: left;">
+        <a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal">Tweet</a>
+        <fb:like href="http://artifix.net{{ page.url }}" layout="button_count" show_faces="true" font="arial"></fb:like>
+    </div>
+
+    <div id="disqus_thread"></div>
 </div>
 
-<h3 class="comments">Comments</h3>
-<div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_shortname = 'artifix';
 
