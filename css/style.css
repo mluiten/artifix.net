@@ -36,7 +36,7 @@ sub {
 
 h1 { font-size: 25px; }
 h2 { font-size: 22px; }
-h3 { font-size: 19px; }
+h3 { font-size: 20px; }
 h4 { font-size: 17px; }
 
 header h1 {
@@ -79,14 +79,16 @@ nav li.active a {
 
 p, ul, ol,
 #post div.highlight {
-    margin: 16px 0;
+    margin: 20px 0;
 }
 h1, h2, h3, h4, h5, h6 {
     margin: 24px 0;
     color: #333;
-    line-height: 120%;
     letter-spacing: -1px;
+    line-height: 120%;
     margin-bottom: -10px;
+    font-family: "Droid Sans", Helvetica, Arial, sans-serif;
+    font-weight: normal;
 }
 h1:first-child, h2:first-child, h3:first-child,
 h4:first-child, h5:first-child, h6:first-child {
@@ -94,7 +96,7 @@ h4:first-child, h5:first-child, h6:first-child {
 }
 h1 {
     color: #D93312;
-    margin-bottom: 16px;
+    margin-bottom: 20px;
 }
 .category {
     float:left;
@@ -123,12 +125,12 @@ ul.blogs li {
     margin: 0;
 }
 ul.blogs li p {
-    margin-top: -12px;
+    margin-top: -16px;
 }
 ul.blogs li h3,
 ul.blogs li h3 a {
     margin-top: 0;
-    margin-bottom: 16px;
+    margin-bottom: 20px;
     color: #333;
 }
 ul.blogs li h3 a:hover {
@@ -180,12 +182,12 @@ h3.comments {
 
 .content h3,
 .content h4,
-.content div {
+.content > div {
     line-height: 21px;
 }
 
 .content section {
-    margin: 40px 0;
+    margin: 50px 0;
 }
 
 #post {
@@ -220,4 +222,12 @@ h3.comments {
 
 #disqus_thread table {
     margin: 0;
+}
+
+#disqus_thread #dsq-new-post h3 {
+    display: none !important;
+}
+
+#disqus_thread #dsq-comments-title h3 {
+    margin: 10px 0;
 }
