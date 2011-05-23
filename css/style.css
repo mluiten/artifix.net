@@ -190,6 +190,10 @@ h3.comments {
     margin: 50px 0;
 }
 
+.indent {
+    margin-left: 95px;
+}
+
 #post {
     margin-left: 95px;
     width: 840px;
