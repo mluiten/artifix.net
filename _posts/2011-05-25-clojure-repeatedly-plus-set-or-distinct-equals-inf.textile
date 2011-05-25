@@ -1,0 +1,9 @@
+---
+layout: post
+
+title: Clojure's repeatedly + (set | distinct) == infinite loop
+
+author: Menno Luiten
+---
+
+Just a fair warning for anybody trying to generate random stuff like I did
