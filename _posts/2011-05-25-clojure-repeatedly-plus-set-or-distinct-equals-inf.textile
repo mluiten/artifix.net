@@ -7,3 +7,7 @@ author: Menno Luiten
 ---
 
 Just a fair warning for anybody trying to generate random stuff like I did
+
+{% highlight clojure %}
+(take 10 (distinct (repeatedly #(rand-nth [1 2 3 4 5]))))
+{% endhighlight %}
