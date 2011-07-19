@@ -6,8 +6,15 @@ title: Clojure's repeatedly + (set | distinct) == infinite loop
 author: Menno Luiten
 ---
 
-Just a fair warning for anybody trying to generate random stuff like I did
+While working on a project in the wonderful "Clojure":http://clojure.org, I ran into a tricky infinite loop. So for those who are interested: here is a fair warning for anybody trying to get a unique random 'slice' of a vector/list/sequence. I tried to solve this by using the following code
 
 {% highlight clojure %}
-(take 10 (distinct (repeatedly #(rand-nth [1 2 3 4 5]))))
+(defn take-random
+    "Takes a random subset of the collection and returns it"
+    [n coll]
+    (take n (distinct (repeatedly #(rand-nth coll)))))
 {% endhighlight %}
+
+So, do you see the infinite loop?
+
+It occurs when the collection is smaller than the number of random elements requested. %(highlight)distinct% will keep asking the (infinite) %(highlight)repeatedly% for a new unique value, which will never come because all the unique values have already been presented.
