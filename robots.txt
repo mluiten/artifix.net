@@ -1,3 +1,2 @@
 User-Agent: *
-Allow: /
 Sitemap: http://artifix.net/sitemap.xml
