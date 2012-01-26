@@ -3,13 +3,13 @@ layout: default
 stylesheets: ['/css/syntax.css']
 ---
 <section id="article">
-    <div id="post" class="grid_8">
+    <article id="post" class="grid_8">
         <h1>{{ page.title }}</h1>
         <p class="date">Posted on {{ page.date | date_to_long_string }}</p>
         {% if page.excerpt %}<p class="excerpt">{{ page.excerpt }}</p>{% endif %}
         {{ content }}
         {% if page.author %}<p class="author">Written by {{ page.author }}</p>{% endif %}
-    </div>
+    </article>
     <div class="clear"></div>
 </section>
 
