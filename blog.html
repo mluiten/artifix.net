@@ -1,17 +1,21 @@
 ---
-layout: page
+layout: default
 title: Blog
 ---
-<ul class="blogs">
-{% for post in site.posts %}
-<li class="clearfix">
-    <h3 class="category">{{ post.date | date_to_string }}</h3>
-    <div class="article">
-        <article>
-            <h3 ><a href="{{post.url}}">{{ post.title }}</a></h3>
-            <p>{{ post.excerpt }}</p>
-        </article>
-    </div>
-</li>
-{% endfor %}
-</ul>
+<section id="blog">
+    <ul class="blogs">
+    {% for post in site.posts %}
+    <li class="clearfix">
+        <div class="grid_1 category">
+            <h3>{{ post.date | date_to_string }}</h3>
+        </div>
+        <div class="grid_9 article">
+            <article>
+                <h3 ><a href="{{post.url}}">{{ post.title }}</a></h3>
+                <p>{{ post.excerpt }}</p>
+            </article>
+        </div>
+    </li>
+    {% endfor %}
+    </ul>
+</section>

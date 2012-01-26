@@ -26,18 +26,19 @@
     <link rel="stylesheet" type="text/css" href="/css/960.gs/min/reset.css" />
     <link rel="stylesheet" type="text/css" href="/css/960.gs/min/text.css" />
     <link rel="stylesheet" type="text/css" href="/css/960.gs/min/960.css" />
-    <link href='http://fonts.googleapis.com/css?family=Mako' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Droid+Sans:regular,bold' rel='stylesheet' type='text/css' />
+    <link rel="stylesheet" type="text/css" href="/css/grid-80.css" />
+    <link href='http://fonts.googleapis.com/css?family=Ubuntu:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="/css/style.css?{{ site.time | date: "%s" }}" />
 {% if page.stylesheets %}{% for stylesheet in page.stylesheets %}
     <link rel="stylesheet" type="text/css" href="{{ stylesheet }}?{{ site.time | date: "%s" }}" />
 {% endfor %}{% endif %}
     <script src="/js/html5/libs/modernizr-1.7.min.js"></script>
 </head>
-<body class="container_12">
+<body class="container_10">
     <header>
-        <h1 class="grid_4"><a href="/"><img src="/img/logo.png" alt="Artifix logo" /></a></h1>
-        <nav class="grid_8">
+        <div class="grid_1" id="icon"><a href="/"><img src="/img/icon.png" alt="" /></a></div>
+        <div class="grid_2" id="logo_text"><a href="/"><img src="/img/logo_txt.png" alt="Artifix - Development & Design" /></a></div>
+        <nav class="grid_7">
           <ul>
             <li{% if page.url == '/products.html' %} class="active"{% endif %}><a href="/products.html">web &amp; mobile projects</a></li>
             <li{% if page.url == '/blog.html' %} class="active"{% endif %}><a href="/blog.html">blog</a></li>
@@ -46,11 +47,11 @@
         </nav>
         <div class="clear"></div>
     </header>
-    <div class="grid_12 content" role="main">
+    <div class="content" role="main">
         {{ content }}
     </div>
     <div class="clear"></div>
-    <footer>
+    <footer class="grid_10">
         <div id="footer">
             <p style="float: right">
                 Would you like to hire me?

@@ -9,9 +9,22 @@
      font-style: normal;
 }
 
+html,body {
+    background: url(/img/fabric_bg.png);
+}
+
 body {
-    margin: 30px 0;
+    margin: 48px 0;
     color: #555;
+}
+
+#logo_text {
+    height: 80px;
+    position: relative;
+}
+#logo_text img {
+    position: absolute;
+    bottom: 0;
 }
 
 a {
@@ -34,37 +47,32 @@ sub {
 }
 
 
-h1 { font-size: 25px; }
-h2 { font-size: 22px; }
-h3 { font-size: 20px; }
-h4 { font-size: 17px; }
-
-header h1 {
-    margin-bottom: 0;
-}
-
 nav {
+    height: 80px;
 }
 
 nav ul {
-    float: right;
+    position: absolute;
+    right: 0;
+    bottom: 0;
     list-style: none;
     margin: 0;
 }
 
 nav li {
     float: left;
-    margin: 0 5px 0 0;
-    background-color: #01A2A6;
-    color: #fff;
-    font: 17px/120% Harabara, Helvetica, Arial, sans-serif;
+    min-width: 68px;
+    margin: 0 0 0 6px;
+    border-bottom: 4px solid #01A2A6;
+    color: #01A2A6;
+    font: 19px/120% Harabara, Helvetica, Arial, sans-serif;
+    text-align: center;
 }
 nav li a {
     display: block;
-    padding: 9px;
-    width: 62px;
-    height: 62px;
-    color: #fff;
+    position: relative;
+    padding: 12px 6px 6px;
+    color: #01A2A6;
     text-decoration: none;
     font-weight: bold;
 }
@@ -79,41 +87,50 @@ nav li.active a {
 
 p, ul, ol,
 #post div.highlight {
-    margin: 20px 0;
+    margin: 0 0 18px 0;
+    font-family: Georgia, Palentino, serif;
+    font-size: 16px;
+    line-height: 150%;
+}
+p:last-child, ul:last-child, ol:last-child {
+    margin-bottom: 0;
 }
 h1, h2, h3, h4, h5, h6 {
-    margin: 24px 0;
+    margin-bottom: 12px;
     color: #333;
     letter-spacing: -1px;
     line-height: 120%;
-    margin-bottom: -10px;
-    font-family: "Droid Sans", Helvetica, Arial, sans-serif;
+    font-family: Ubuntu, Helvetica, Arial, Verdana, serif;
     font-weight: normal;
+    text-shadow: 0 -1px 0 #fff;
 }
 h1:first-child, h2:first-child, h3:first-child,
 h4:first-child, h5:first-child, h6:first-child {
     margin-top: 0;
 }
 h1 {
-    color: #D93312;
-    margin-bottom: 20px;
+    margin-bottom: 18px;
 }
+h1 { font-size: 23px; font-weight: 700; }
+h2 { font-size: 21px; }
+h3 { font-size: 19px; }
+h4 { font-size: 17px; }
+
 .category {
-    float:left;
-    text-align: right;
-    color: #D93312;
+    border-top: 1px solid #B9B9B9;
+    text-align: center;
+    color: #949494;
     width: 80px;
-    margin: 0 15px 0 0;
+    margin-left: 9px;
+    padding-top: 6px;
+
+    font-size: 15px;
+    color: #949494;
 }
 
 .content {
     margin-bottom: 10px;
 }
-.content .article {
-    float: left;
-    width: 840px;
-}
-
 .content ul li {
     margin: 0 50px 0 30px;
 }
@@ -124,36 +141,24 @@ ul.blogs {
 ul.blogs li {
     margin: 0;
 }
-ul.blogs li p {
-    margin-top: -16px;
-}
-ul.blogs li h3,
-ul.blogs li h3 a {
+ul.blogs li h2,
+ul.blogs li h2 a {
     margin-top: 0;
-    margin-bottom: 20px;
+    margin-bottom: 6px;
     color: #333;
 }
-ul.blogs li h3 a:hover {
+ul.blogs li h2 a:hover {
     color: #000;
-}
-ul.blogs li h3.category {
-    color: #D93312;
 }
 
 #featured .article {
     height: 150px;
-    width: 270px; 
 
-    margin-right: 10px;
     background: url(/img/stories/tomato.jpg) no-repeat left center;
-
-    -moz-border-radius: 4px;
-    border-radius: 4px; 
 }
 #featured .article h5 {
     background-color: rgba(0,0,0, 0.4);
-    margin: 0;
-    padding: 10px 14px;
+    padding: 12px 12px;
     color: #fff;
     text-shadow: -1px -1px 0 rgba(0,0,0, 0.5);
 
@@ -171,28 +176,23 @@ h3.comments {
 .content .date {
     font-size: 13px;
     color: #999;
+    margin-bottom: 6px;
 }
 .content h3 .date {
-    margin-top: 0;
     margin-left: 0.5em;
     letter-spacing: normal;
     font-weight: normal;
     line-height: 21px;
 }
 
-.content h3,
-.content h4,
-.content > div {
-    line-height: 21px;
-}
-
 .content section {
-    margin: 50px 0;
+    margin: 48px 0;
+}
+.content .item {
+    margin: 24px 0;
 }
 
 #post {
-    margin-left: 95px;
-    width: 840px;
 }
 
 #post .author {
@@ -201,18 +201,14 @@ h3.comments {
     margin-top: 0;
     color: #888;
 }
-#post .excerpt {
-    font-size: 14px;
-    font-weight: bold;
-}
 
 #footer {
     border-top: 1px solid #D0D0D0;
-    padding-top: 10px;
-    margin-left: 105px;
-    width: 840px;
-    font-size: 11px;
+    padding-top: 12px;
     color: #939393;
+}
+#footer p {
+    font-size: 12px;
 }
 
 .likes iframe {

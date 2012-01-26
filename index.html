@@ -1,35 +1,31 @@
 ---
 layout: default
 ---
-<section id="we" class="item">
-    <h3 class="category">
-        We are
-    </h3><h3 style="font-size: 21px; color: #4A4A4A; letter-spacing: -1px;">
-        <a href="http://mennoluiten.com">one man</a>, trying to make the interweb a better place by innovating.
-    </h3>
-    <div class="clear"></div>
+<section id="we" class="clearfix">
+    <h3 class="grid_1 category">Over mij</h3>
+    <p class="grid_9">
+    Ik ben Menno Luiten, sinds 2012 zelfstandig ondernemer uit Leiden. Mijn grootste bezigheid is het creeren van innovatieve oplossingen voor markten die van nature weinig inbreng krijgen van ICT. Ik ben trouw volger van de Lean Startup filosofie en ik bouw mijn oplossingen dan ook als aaneenschakeling van experimenten.
+    </p>
 </section>
-<section id="featured" class="item">
-    <h3 class="category">
-        Featured projects
-    </h3><div class="article" style="background-image: url(http://lorempixum.com/350/200)">
-        <h5><span style="font-weight: normal">Website:</span> Testing 123</h5>
-    </div><div class="article" style="width: 560px; margin: 0">
-        <h5><span style="font-weight: normal">Android:</span> Pomodroido</h5>
+<section id="featured" class="clearfix">
+    <h3 class="grid_1 category">Featured</h3>
+    <div class="grid_9">
+        <div class="grid_3 alpha article" style="background-image: url(http://lorempixum.com/350/200)">
+            <h5><span style="font-weight: normal">Website:</span> Testing 123</h5>
+        </div><div class="grid_6 omega article">
+            <h5><span style="font-weight: normal">Android:</span> Pomodroido</h5>
+        </div>
     </div>
-    <div class="clear"></div>
 </section>
-<section id="blogs" class="item">
-    <h3 class="category">
-        Blogs
-    </h3>
-    <ul class="blogs article">
+<section id="blogs" class="clearfix">
+    <h3 class="grid_1 category">Blogs</h3>
+    <ul class="grid_9 blogs article">
         {% for post in site.posts limit:4 %}
         <li><article>
-            <h3>
+            <h2>
                 <a href="{{post.url}}">{{post.title}}</a>
                 <span class="date">{{ post.date | date_to_string }}</span>
-            </h3>
+            </h2>
             {% if post.excerpt %}<p class="excerpt">{{ post.excerpt }}</p>{% endif %}
         </article></li>
         {% endfor %}

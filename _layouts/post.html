@@ -2,21 +2,27 @@
 layout: default
 stylesheets: ['/css/syntax.css']
 ---
-<section>
-    <div class="category date">Posted on<br/>{{ page.date | date_to_string }}</div>
-    <div id="post">
+<section id="article">
+    <div id="post" class="grid_8">
         <h1>{{ page.title }}</h1>
-    {% if page.excerpt %}   <p class="excerpt"><strong>{{ page.excerpt }}</strong></p>{% endif %}
+        <p class="date">Posted on {{ page.date | date_to_long_string }}</p>
+        {% if page.excerpt %}<p class="excerpt">{{ page.excerpt }}</p>{% endif %}
         {{ content }}
         {% if page.author %}<p class="author">Written by {{ page.author }}</p>{% endif %}
+    </div>
+    <div class="clear"></div>
+</section>
 
-    <div class="likes" style="clear: left;">
+<section id="social">
+<div class="grid_8">
+    <div class="likes">
         <a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal">Tweet</a>
         <fb:like href="http://artifix.net{{ page.url }}" layout="button_count" show_faces="true" font="arial"></fb:like>
     </div>
 
     <div id="disqus_thread"></div>
 </div>
+</section>
 
 <script type="text/javascript">
     var disqus_shortname = 'artifix';
