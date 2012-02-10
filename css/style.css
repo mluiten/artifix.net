@@ -22,9 +22,14 @@ body {
     height: 80px;
     position: relative;
 }
-#logo_text img {
+#logo_text h2 {
     position: absolute;
     bottom: 0;
+    margin: 0;
+    font-size: 48px;
+    letter-spacing: -2px;
+    color: #D93312;
+    line-height: 70%;
 }
 
 a {
@@ -105,11 +110,11 @@ h1, h2, h3, h4, h5, h6 {
     letter-spacing: -1px;
     line-height: 135%;
     font-family: Ubuntu, Helvetica, Arial, Verdana, serif;
-    font-weight: 400;
-    text-shadow: 0 -1px 0 #fff;
+    font-weight: 500;
 }
 h1 {
     margin-bottom: 12px;
+    text-shadow: 0 1px 0 #fff;
 }
 h1 { font-size: 24px; }
 h2 { font-size: 21px; }
