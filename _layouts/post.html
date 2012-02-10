@@ -2,26 +2,26 @@
 layout: default
 stylesheets: ['/css/syntax.css']
 ---
-<section id="article">
-    <article id="post" class="grid_8">
+<section id="article" class="clearfix">
+    <div class="grid_1 likes">
+        <a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal">Tweet</a>
+        <fb:like href="http://artifix.net{{ page.url }}" layout="button_count" show_faces="true" font="arial"></fb:like>
+    </div>
+    <article id="post" class="grid_9">
         <h1>{{ page.title }}</h1>
         <p class="date">Posted on {{ page.date | date_to_long_string }}</p>
         {% if page.excerpt %}<p class="excerpt">{{ page.excerpt }}</p>{% endif %}
         {{ content }}
         {% if page.author %}<p class="author">Written by {{ page.author }}</p>{% endif %}
     </article>
+
     <div class="clear"></div>
-</section>
-
-<section id="social">
-<div class="grid_8">
-    <div class="likes">
-        <a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal">Tweet</a>
-        <fb:like href="http://artifix.net{{ page.url }}" layout="button_count" show_faces="true" font="arial"></fb:like>
-    </div>
-
-    <div id="disqus_thread"></div>
-</div>
+    <section id="comments">
+        <h3 class="grid_1 category">Comments</h3>
+        <div class="grid_9">
+            <div id="disqus_thread"></div>
+        </div>
+    </section>
 </section>
 
 <script type="text/javascript">

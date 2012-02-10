@@ -27,7 +27,7 @@
     <link rel="stylesheet" type="text/css" href="/css/960.gs/min/text.css" />
     <link rel="stylesheet" type="text/css" href="/css/960.gs/min/960.css" />
     <link rel="stylesheet" type="text/css" href="/css/grid-80.css" />
-    <link href='http://fonts.googleapis.com/css?family=Ubuntu:400,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="/css/style.css?{{ site.time | date: "%s" }}" />
 {% if page.stylesheets %}{% for stylesheet in page.stylesheets %}
     <link rel="stylesheet" type="text/css" href="{{ stylesheet }}?{{ site.time | date: "%s" }}" />
@@ -40,9 +40,10 @@
         <div class="grid_2" id="logo_text"><a href="/"><img src="/img/logo_txt.png" alt="Artifix - Development & Design" /></a></div>
         <nav class="grid_7">
           <ul>
-            <li{% if page.url == '/products.html' %} class="active"{% endif %}><a href="/products.html">web &amp; mobile projects</a></li>
+            <li{% if page.url == '/products.html' %} class="active"{% endif %}><a href="/products.html">projecten</a></li>
             <li{% if page.url == '/blog.html' %} class="active"{% endif %}><a href="/blog.html">blog</a></li>
-            <li{% if page.url == '/about.html' %} class="active"{% endif %}><a href="/about.html">about me</a></li>
+            <li{% if page.url == '/visie.html' %} class="active"{% endif %}><a href="/visie.html">visie</a></li>
+            <li{% if page.url == '/about.html' %} class="active"{% endif %}><a href="/about.html">over ons</a></li>
           </ul>
         </nav>
         <div class="clear"></div>
@@ -53,18 +54,14 @@
     <div class="clear"></div>
     <footer class="grid_10">
         <div id="footer">
-            <p style="float: right">
-                Would you like to hire me?
-                <a href="mailto:hire@artifix.net">I’m available</a>
-            </p>
+            <div class="fb-like" style="float: right;">
+                <script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script>
+                <fb:like href="http://artifix.net" send="false" layout="button_count" show_faces="false" font="arial"></fb:like>
+            </div>
             <p>
                 Artifix will soon be registered at the Kamer van Koophandel of Leiden<br/>
-                All rights reserved &copy; Artifix, 2011
+                Copyright &copy; Artifix, 2011-2012
             </p>
-            <div class="fb-like" style="clear: left;">
-                <script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script>
-                <fb:like href="http://artifix.net" show_faces="true" width="450" font="arial"></fb:like>
-            </div>
         </div>
     </footer>
 

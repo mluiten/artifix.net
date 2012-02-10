@@ -29,7 +29,7 @@ body {
 
 a {
     text-decoration: none;
-    color: #FF7A20;
+    color: #D93312;
 }
 a:hover {
     color: #FF4234;
@@ -63,9 +63,9 @@ nav li {
     float: left;
     min-width: 68px;
     margin: 0 0 0 6px;
-    border-bottom: 4px solid #01A2A6;
     color: #01A2A6;
     font: 19px/120% Harabara, Helvetica, Arial, sans-serif;
+    letter-spacing: 1px;
     text-align: center;
 }
 nav li a {
@@ -74,15 +74,13 @@ nav li a {
     padding: 12px 6px 6px;
     color: #01A2A6;
     text-decoration: none;
+    border-bottom: 4px solid #01A2A6;
     font-weight: bold;
 }
+nav li.active a,
 nav li a:hover {
-    color: #01A2A6;
-    background-color: #BDF271;
-}
-nav li.active a {
-    color: #01A2A6;
-    background-color: #BDF271;
+    color: #D93312;
+    border-bottom-color: #D93312;
 }
 
 p, ul, ol,
@@ -95,29 +93,31 @@ p, ul, ol,
 p:last-child, ul:last-child, ol:last-child {
     margin-bottom: 0;
 }
+.sans-serif {
+    font-family: Ubuntu, Arial, Verdana, sans-serif;
+}
+.smaller {
+    font-size: 13px;
+}
 h1, h2, h3, h4, h5, h6 {
-    margin-bottom: 12px;
+    margin-bottom: 6px;
     color: #333;
     letter-spacing: -1px;
-    line-height: 120%;
+    line-height: 135%;
     font-family: Ubuntu, Helvetica, Arial, Verdana, serif;
-    font-weight: normal;
+    font-weight: 400;
     text-shadow: 0 -1px 0 #fff;
 }
-h1:first-child, h2:first-child, h3:first-child,
-h4:first-child, h5:first-child, h6:first-child {
-    margin-top: 0;
-}
 h1 {
-    margin-bottom: 18px;
+    margin-bottom: 12px;
 }
-h1 { font-size: 24px; font-weight: 700; }
+h1 { font-size: 24px; }
 h2 { font-size: 21px; }
 h3 { font-size: 19px; }
 h4 { font-size: 17px; }
 
 .category {
-    border-top: 1px solid #B9B9B9;
+    border-top: 1px solid #bbb;
     text-align: center;
     color: #949494;
     width: 80px;
@@ -125,52 +125,65 @@ h4 { font-size: 17px; }
     padding-top: 6px;
 
     font-size: 15px;
-    color: #949494;
+    color: #999;
 }
 
-.content {
-    margin-bottom: 10px;
-}
 .content ul li {
     margin: 0 50px 0 30px;
 }
 ul.blogs {
     list-style: none;
-    margin: 0;
 }
 ul.blogs li {
-    margin: 0 0 24px 0;
+    margin: 0 0 12px 0;
+}
+ul.blogs li:last-child {
+    margin: 0;
 }
 ul.blogs li h2,
 ul.blogs li h2 a {
-    margin-top: 0;
-    margin-bottom: 6px;
     color: #333;
+    margin: 0;
 }
 ul.blogs li h2 a:hover {
     color: #000;
 }
 
-#featured .article {
-    height: 150px;
-
-    background: url(/img/stories/tomato.jpg) no-repeat left center;
+.boxed {
+    border: 1px solid #bbb;
+    background-color: rgba(255,255,255, 0.45);
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    padding: 6px;
 }
-#featured .article h5 {
-    background-color: rgba(0,0,0, 0.4);
-    padding: 12px 12px;
-    color: #fff;
-    text-shadow: -1px -1px 0 rgba(0,0,0, 0.5);
-
-    -moz-border-radius-topright: 4px; -moz-border-radius-topleft: 4px;
-    border-top-right-radius: 4px; border-top-left-radius: 4px;
+.boxed .content {
+    padding: 12px 6px 6px;
+}
+.boxed h2,
+.boxed h3,
+.boxed h4,
+.boxed h5,
+.boxed p {
+    margin: 0;
 }
 
-h3.comments {
-    color: #D93312;
-    border-top: 1px solid #ccc;
-    margin-top: 10px;
-    padding-top: 10px;
+#comments {
+    margin-top: 24px;
+}
+
+.box {
+    padding: 2px 3px 3px;
+    background-color: rgba(255,255,255, 0.45);
+    border: 1px solid #bbb;
+
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+}
+
+blockquote {
+    border-left: 2px solid #bbb;
+    padding-left: 12px;
+    margin: 18px 0;
 }
 
 .content .date {
@@ -189,7 +202,7 @@ h3.comments {
     margin: 48px 0;
 }
 .content .item {
-    margin: 24px 0;
+    margin-bottom: 24px;
 }
 
 #post {
@@ -205,10 +218,14 @@ h3.comments {
 #footer {
     border-top: 1px solid #D0D0D0;
     padding-top: 12px;
-    color: #939393;
+    color: #999;
 }
 #footer p {
     font-size: 12px;
+}
+
+.likes {
+    margin-top: 48px;
 }
 
 .likes iframe {
