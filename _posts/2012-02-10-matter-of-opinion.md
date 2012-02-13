@@ -15,9 +15,8 @@ I've been reading about "Generation Z", the generation since 1990 that grew up w
 
 This is new problem. Never in human history has there been a "information overload". Everybody who has used social media intensively know this urge to constantly check what's going on. It's easy consumerism and on days I find myself doing nothing more than consuming information.
 
-### Teaching something new: information filtering
+## Listening to yourself
 
-Instead of giving children drugs to supress the urge to be distracted, why not teach them how to focus? How to realize the world does not change all that much since the last time you checked your Facebook account.
-
+What I think is the biggest danger, is losing yourself in the chatter. It takes effort to listen to yourself; I have to be in some quiet spot, for a time, without danger of being distracted. No phone, no e-mail, no computing devices of any sort; just me. I focus on my breathing, like mediation, and see whatever enters my brain. I leave calm, motivated, purposeful. I have no expectations to uphold but my own.
 
 [adhd]: http://testing.com/ "More and more ADHD"
