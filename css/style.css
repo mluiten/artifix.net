@@ -26,10 +26,10 @@ body {
     position: absolute;
     bottom: 0;
     margin: 0;
-    font-size: 48px;
-    letter-spacing: -2px;
+    font-size: 56px;
+    letter-spacing: -4px;
     color: #D93312;
-    line-height: 70%;
+    line-height: 75%;
 }
 
 a {
@@ -50,7 +50,6 @@ a.external {
 sub {
     font-size: 0.8em;
 }
-
 
 nav {
     height: 80px;
@@ -93,7 +92,7 @@ p, ul, ol,
     margin: 0 0 18px 0;
     font-family: Georgia, Palentino, serif;
     font-size: 16px;
-    line-height: 150%;
+    line-height: 24px;
 }
 p:last-child, ul:last-child, ol:last-child {
     margin-bottom: 0;
@@ -108,18 +107,18 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 6px;
     color: #333;
     letter-spacing: -1px;
-    line-height: 135%;
+    line-height: 100%;
     font-family: Ubuntu, Helvetica, Arial, Verdana, serif;
     font-weight: 500;
 }
 h1 {
-    margin-bottom: 12px;
+    margin-bottom: 18px;
     text-shadow: 0 1px 0 #fff;
 }
 h1 { font-size: 24px; }
 h2 { font-size: 21px; }
 h3 { font-size: 19px; }
-h4 { font-size: 17px; }
+h4 { font-size: 18px; }
 
 .category {
     border-top: 1px solid #bbb;
@@ -146,23 +145,27 @@ ul.blogs li:last-child {
     margin: 0;
 }
 ul.blogs li h2,
-ul.blogs li h2 a {
+ul.blogs li h3,
+ul.blogs li h2 a,
+ul.blogs li h3 a {
+    margin-bottom: 3px;
     color: #333;
-    margin: 0;
 }
-ul.blogs li h2 a:hover {
-    color: #000;
+ul.blogs li h2 a:hover,
+ul.blogs li h3 a:hover {
+    color: #555;
+}
+
+.spacer {
+    margin: 24px 0 !important;
 }
 
 .boxed {
-    border: 1px solid #bbb;
+    border: 1px solid #fff;
     background-color: rgba(255,255,255, 0.45);
-    border-radius: 3px;
-    -moz-border-radius: 3px;
-    padding: 6px;
 }
 .boxed .content {
-    padding: 12px 6px 6px;
+    padding: 12px;
 }
 .boxed h2,
 .boxed h3,
@@ -171,18 +174,20 @@ ul.blogs li h2 a:hover {
 .boxed p {
     margin: 0;
 }
+.boxed p {
+    margin-top: 6px;
+    font-size: 14px;
+    color: #7F7F7F;
+}
 
 #comments {
-    margin-top: 24px;
+    margin-top: 12px;
 }
 
 .box {
     padding: 2px 3px 3px;
     background-color: rgba(255,255,255, 0.45);
-    border: 1px solid #bbb;
-
-    border-radius: 3px;
-    -moz-border-radius: 3px;
+    border: 1px solid #fff;
 }
 
 blockquote {
@@ -195,6 +200,7 @@ blockquote {
     font-size: 13px;
     color: #999;
     margin-bottom: 6px;
+    text-align: right;
 }
 .content h3 .date {
     margin-left: 0.5em;
@@ -230,7 +236,7 @@ blockquote {
 }
 
 .likes {
-    margin-top: 48px;
+    margin-top: 36px;
 }
 
 .likes iframe {

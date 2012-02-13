@@ -5,8 +5,8 @@ title: Blog
 <section id="blog">
     <ul class="blogs">
     {% for post in site.posts %}
-    <li class="clearfix">
-        <h3 class="grid_1 category">{{ post.date | date_to_string }}</h3>
+    <li class="clearfix spacer">
+        <h4 class="grid_1 category">{{ post.date | date_to_string }}</h4>
         <div class="grid_9 article">
             <h2><a href="{{post.url}}">{{ post.title }}</a></h2>
             <p>{{ post.excerpt }}</p>

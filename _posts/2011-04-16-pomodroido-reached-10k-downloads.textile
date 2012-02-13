@@ -1,8 +1,9 @@
 ---
 layout: post
 title: Pomodroido download count reached 10K!
-excerpt: My first Android application, Pomodroido, has reached the magical border of <b>10K</b> downloads!
 ---
+
+My first Android application, Pomodroido, has reached the magical border of <b>10K</b> downloads!
 
 And there was much rejoicing! Unfortunatly, I haven't had alot of time to work on the app the last few weeks, but I have some exciting features in the pipeline, which are expected to be released in a few weeks/a month. Some teasers:
 

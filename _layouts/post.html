@@ -3,19 +3,22 @@ layout: default
 stylesheets: ['/css/syntax.css']
 ---
 <section id="article" class="clearfix">
-    <div class="grid_1 likes">
-        <a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal">Tweet</a>
-        <fb:like href="http://artifix.net{{ page.url }}" layout="button_count" show_faces="true" font="arial"></fb:like>
-    </div>
-    <article id="post" class="grid_9">
-        <h1>{{ page.title }}</h1>
-        <p class="date">Posted on {{ page.date | date_to_long_string }}</p>
-        {% if page.excerpt %}<p class="excerpt">{{ page.excerpt }}</p>{% endif %}
-        {{ content }}
-        {% if page.author %}<p class="author">Written by {{ page.author }}</p>{% endif %}
+    <article id="post">
+        <h1 class="push_1 grid_9">{{ page.title }}</h1>
+        <div class="clear"></div>
+        <p class="grid_1 date">{{ page.date | date_to_long_string }}</p>
+        <div class="grid_9">
+            {% if page.excerpt %}<p class="excerpt">{{ page.excerpt }}</p>{% endif %}
+            {{ content }}
+            <div class="likes">
+                <fb:like href="http://artifix.net{{ page.url }}" layout="button_count" show_faces="true" font="arial"></fb:like>
+                <a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal">Tweet</a>
+            </div>
+            {% if page.author %}<p class="author">Written by {{ page.author }}</p>{% endif %}
+        </div>
+        <div class="clear"></div>
     </article>
 
-    <div class="clear"></div>
     <section id="comments">
         <h3 class="grid_1 category">Comments</h3>
         <div class="grid_9">
