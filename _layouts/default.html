@@ -27,7 +27,9 @@
     <link rel="stylesheet" type="text/css" href="/css/960.gs/min/text.css" />
     <link rel="stylesheet" type="text/css" href="/css/960.gs/min/960.css" />
     <link rel="stylesheet" type="text/css" href="/css/grid-80.css" />
-    <link href='http://fonts.googleapis.com/css?family=Ubuntu:300,500' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css' />
+    <link href='http://fonts.googleapis.com/css?family=Signika:300,600' rel='stylesheet' type='text/css' />
+    <link href='http://fonts.googleapis.com/css?family=Ubuntu:300,500' rel='stylesheet' type='text/css' />
     <link rel="stylesheet" type="text/css" href="/css/style.css?{{ site.time | date: "%s" }}" />
 {% if page.stylesheets %}{% for stylesheet in page.stylesheets %}
     <link rel="stylesheet" type="text/css" href="{{ stylesheet }}?{{ site.time | date: "%s" }}" />
@@ -36,8 +38,8 @@
 </head>
 <body class="container_10">
     <header>
-        <div class="grid_1" id="icon"><a href="/"><img src="/img/icon.png" alt="" /></a></div>
-        <div class="grid_2" id="logo_text"><a href="/"><h2>Artifix</h2></a></div>
+        <div class="grid_1" id="icon"><a href="/"><img src="/img/logo.png" alt="" /></a></div>
+        <div class="grid_2" id="logo_text"><a href="/"><h2><img src="/img/logo-text.png" alt="Artifix" /></h2></a></div>
         <nav class="grid_7">
           <ul>
             <li{% if page.url == '/products.html' %} class="active"{% endif %}><a href="/products.html">projecten</a></li>
@@ -56,7 +58,7 @@
         <div id="footer">
             <div class="fb-like" style="float: right;">
                 <script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script>
-                <fb:like href="http://artifix.net" send="false" layout="button_count" show_faces="false" font="arial"></fb:like>
+                <fb:like href="https://www.facebook.com/artifix.net" send="false" layout="button_count" show_faces="false" font="arial"></fb:like>
             </div>
             <p>
                 Artifix will soon be registered at the Kamer van Koophandel of Leiden<br/>

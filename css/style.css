@@ -14,10 +14,13 @@ html,body {
 }
 
 body {
-    margin: 48px 0;
+    margin: 36px 0;
     color: #555;
 }
 
+#icon {
+    margin-left: 6px;
+}
 #logo_text {
     height: 80px;
     position: relative;
@@ -67,7 +70,7 @@ nav li {
     float: left;
     min-width: 68px;
     margin: 0 0 0 6px;
-    color: #01A2A6;
+    color: #555;
     font: 19px/120% Harabara, Helvetica, Arial, sans-serif;
     letter-spacing: 1px;
     text-align: center;
@@ -76,21 +79,21 @@ nav li a {
     display: block;
     position: relative;
     padding: 12px 6px 6px;
-    color: #01A2A6;
+    color: #555;
     text-decoration: none;
-    border-bottom: 4px solid #01A2A6;
+    border-bottom: 4px solid #555;
     font-weight: bold;
 }
 nav li.active a,
 nav li a:hover {
-    color: #D93312;
-    border-bottom-color: #D93312;
+    color: #FF4234;
+    border-bottom-color: #FF4234;
 }
 
 p, ul, ol,
 #post div.highlight {
     margin: 0 0 18px 0;
-    font-family: Georgia, Palentino, serif;
+    font-family: Signika, Ubuntu, Helvetica, Arial, sans-serif;
     font-size: 16px;
     line-height: 24px;
 }
@@ -98,7 +101,7 @@ p:last-child, ul:last-child, ol:last-child {
     margin-bottom: 0;
 }
 .sans-serif {
-    font-family: Ubuntu, Arial, Verdana, sans-serif;
+    font-family: Signika, Ubuntu, Arial, Verdana, sans-serif;
 }
 .smaller {
     font-size: 13px;
@@ -108,8 +111,8 @@ h1, h2, h3, h4, h5, h6 {
     color: #333;
     letter-spacing: -1px;
     line-height: 100%;
-    font-family: Ubuntu, Helvetica, Arial, Verdana, serif;
-    font-weight: 500;
+    font-family: Arvo, Georgia, serif;
+    font-weight: 400;
 }
 h1 {
     margin-bottom: 18px;
@@ -121,15 +124,15 @@ h3 { font-size: 19px; }
 h4 { font-size: 18px; }
 
 .category {
-    border-top: 1px solid #bbb;
+    background-color: #555;
     text-align: center;
-    color: #949494;
+    color: #F0F0EF;
+    text-shadow: -1px -1px 0 #333;
     width: 80px;
     margin-left: 9px;
-    padding-top: 6px;
+    padding: 4px 0;
 
-    font-size: 15px;
-    color: #999;
+    font-size: 14px;
 }
 
 .content ul li {
@@ -153,19 +156,19 @@ ul.blogs li h3 a {
 }
 ul.blogs li h2 a:hover,
 ul.blogs li h3 a:hover {
-    color: #555;
+    color: #FF4234;
 }
 
 .spacer {
     margin: 24px 0 !important;
 }
 
-.boxed {
-    border: 1px solid #fff;
-    background-color: rgba(255,255,255, 0.45);
+img.boxed,
+.boxed .teaser {
+    border: 1px solid #555;
 }
 .boxed .content {
-    padding: 12px;
+    padding: 12px 6px;
 }
 .boxed h2,
 .boxed h3,
@@ -197,10 +200,9 @@ blockquote {
 }
 
 .content .date {
-    font-size: 13px;
-    color: #999;
-    margin-bottom: 6px;
-    text-align: right;
+    font-family: Ubuntu, Arial, Verdana, sans-serif;
+    font-size: 12px;
+    line-height: 100%;
 }
 .content h3 .date {
     margin-left: 0.5em;
@@ -210,7 +212,7 @@ blockquote {
 }
 
 .content section {
-    margin: 48px 0;
+    margin: 54px 0;
 }
 .content .item {
     margin-bottom: 24px;
@@ -233,6 +235,7 @@ blockquote {
 }
 #footer p {
     font-size: 12px;
+    line-height: 16px;
 }
 
 .likes {

@@ -6,7 +6,7 @@ stylesheets: ['/css/syntax.css']
     <article id="post">
         <h1 class="push_1 grid_9">{{ page.title }}</h1>
         <div class="clear"></div>
-        <p class="grid_1 date">{{ page.date | date_to_long_string }}</p>
+        <p class="grid_1 category date">{{ page.date | date: "%d/%m/%y" }}</p>
         <div class="grid_9">
             {% if page.excerpt %}<p class="excerpt">{{ page.excerpt }}</p>{% endif %}
             {{ content }}

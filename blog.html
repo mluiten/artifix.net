@@ -6,7 +6,7 @@ title: Blog
     <ul class="blogs">
     {% for post in site.posts %}
     <li class="clearfix spacer">
-        <h4 class="grid_1 category">{{ post.date | date_to_string }}</h4>
+        <h4 class="grid_1 category">{{ post.date | date: "%d/%m/%y" }}</h4>
         <div class="grid_9 article">
             <h2><a href="{{post.url}}">{{ post.title }}</a></h2>
             <p>{{ post.excerpt }}</p>
